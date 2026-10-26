@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snipfit — GarmentCode в браузере</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>GarmentCode в браузере</h1>
+      <nav><a href="./">Платформа</a> · <a href="./garmentcode.html">GarmentCode (Pyodide)</a></nav>
+    </header>
+    <main class="single">
+      <section class="panel">
+        <p>Загружает Pyodide (Python в WASM) и запускает GarmentCode: мерки тела + параметры дизайна → выкройка (JSON). Всё считается в вашем браузере.</p>
+        <label>Дизайн
+          <select id="design">
+            <option value="t-shirt">t-shirt</option>
+            <option value="default">default</option>
+          </select>
+        </label>
+        <label>Тело
+          <select id="body">
+            <option value="mean_all">mean_all</option>
+            <option value="mean_female">mean_female</option>
+            <option value="mean_male">mean_male</option>
+          </select>
+        </label>
+        <button id="run">Сгенерировать</button>
+        <ul id="log"></ul>
+        <div id="svg"></div>
+        <details><summary>JSON выкройки</summary><pre id="json"></pre></details>
+      </section>
+    </main>
+    <script type="module" src="/src/garmentcode/page.ts"></script>
+  </body>
+</html>

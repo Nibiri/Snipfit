@@ -1,0 +1,7 @@
+# Threads in WASM still need nightly (to rebuild std with atomics).
+# Pinned so builds are reproducible; bump deliberately.
+[toolchain]
+channel = "nightly-2026-10-25"
+components = ["rust-src"]
+targets = ["wasm32-unknown-unknown"]
+profile = "minimal"

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snipfit — проверка платформы</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Snipfit</h1>
+      <nav><a href="./">Платформа</a> · <a href="./garmentcode.html">GarmentCode (Pyodide)</a></nav>
+    </header>
+    <main>
+      <section class="panel">
+        <h2>Проверки браузера</h2>
+        <ul id="checks"></ul>
+        <h2>Многопоточный WASM (Rust + rayon)</h2>
+        <ul id="wasm"><li class="pending">Запуск…</li></ul>
+      </section>
+      <section class="viewport"><canvas id="scene"></canvas><div id="renderer-info"></div></section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
